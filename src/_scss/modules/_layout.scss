@@ -1,0 +1,169 @@
+/* -------------------------------------------------- */
+
+/* !layout blocks */
+
+/* -------------------------------------------------- */
+
+.logo {
+	width: 100%;
+	max-width: 600px;
+}
+.hero {
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	min-height: 420px;
+	display: table;
+	overflow: hidden;
+	.logo {
+		margin: 0 auto;
+	}
+	.container {
+		position: relative;
+		z-index: 2;
+		padding: $spacer/2;
+		@include breakpoint($phablet) {
+			padding: $spacer;
+		
+		}
+		width: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		border: 12px solid $secondary;
+		border-bottom: none;
+	}
+}	
+.bg {
+	@extend %full-coverage;
+	z-index: 0;
+}
+*.no-touch .bg {
+	background-size: cover;
+	background-position: 50% 50%;
+}
+*.touch .bg {
+	background: $black url("../assets/images/01.jpg") no-repeat 100% 100%;
+	background-size: auto 100%;
+}
+.content {
+	position: relative;
+	width: 100%;
+	.logo {
+		max-width: 420px;
+	}
+	.bg {
+		position: fixed;
+	}
+	h1 {
+		@include adjust-font-size-to(ms(12, $base-font-size), 2.8);
+		@include rhythm(0,0,0,0.25);
+		font-family: "HelveticaNeue-CondensedBlack", "Helvetica Neue", "Helvetica", Arial, sans-serif;
+		font-weight: bolder;
+		&:nth-child(2) {
+			@include rhythm(0,0,0,1.25);
+		}
+	}
+	h2 {
+		@include rhythm(0,0,0,2);
+	}
+}
+.wrapper {
+	@extend %wrapper;
+	max-width: 100%;
+	z-index: 2;
+	@include clearfix;
+	padding: $spacer $spacer/2;
+	@include breakpoint($phablet) {
+		padding: $spacer;
+		
+	}
+	@include breakpoint($tabtop) {
+		max-width: $max-width;
+		padding: $spacer $spacer*3 $spacer $spacer;
+	}
+}
+.row {
+	@include row();
+	margin-bottom: $spacer;
+	> [class*="col"] {
+		@include column (6);
+	}
+}
+img {
+	display: block;
+	margin-bottom: $spacer/2;
+	@include breakpoint($phablet) {
+		margin-bottom: $spacer;
+	}
+}
+[role], footer {
+	@include clearfix;
+}
+.cards {
+	position: relative;
+	z-index: 5;
+	border-top: 12px solid $secondary;
+	border-left: 12px solid $secondary;
+	float: left;
+	width: 100%;
+	@include clearfix;
+}
+.card {
+	background: $black;
+	@include panel(1);
+	@include breakpoint($phablet) {
+		@include panel(1, 100%/2);
+	}
+	@include breakpoint($desktop) {
+		@include panel(1, 100%/3);
+	}
+	float: left;
+	.container {
+		> div:first-child {
+			
+			* {
+				color: $white;
+				text-transform: uppercase;
+			}	
+		}
+	}
+	.button {
+		width: auto;
+		display: inline-block;
+	}
+	.bg {
+		border-bottom: 12px solid $secondary;
+		border-right: 12px solid  $secondary;
+	}
+	h1 {
+		border-top: 6px solid $white;
+		border-bottom: 6px solid $white;
+		display: inline-block;
+		padding: $spacer/8;
+		margin: $spacer/8;
+	}
+	nav {
+		white-space: nowrap;
+	}
+	[class*="icon"] {
+		font-size: 44px;
+	}
+}
+footer {
+	border-top: 1px solid rgba($white, 0.5);
+	margin-top: $spacer*2;
+	padding-top: $spacer/2;
+	nav {
+		white-space: nowrap;
+		li {
+			float: left;
+		}
+		a {
+			padding: 0 !important;
+			* {
+				padding: 0 !important;
+			}
+		}
+	}
+}

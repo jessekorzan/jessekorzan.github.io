@@ -1,0 +1,35 @@
+/* -------------------------------------------------- */
+
+/* !type breakpoints */
+
+/* -------------------------------------------------- */
+@include breakpoint($phone) {
+	html {
+	    @include fixed-sized-text;
+	}
+	$base-font-size		: 10px;
+	$base-line-height	: 18px;
+	
+	@include establish-baseline;
+	
+}
+@include breakpoint($phablet) {
+	html {
+	    @include fixed-sized-text;
+	}
+	$base-font-size		: 14px;
+	$base-line-height	: 18px;
+	
+	@include establish-baseline;
+	
+}
+@include breakpoint($desktop) {
+	html {
+	    @include fixed-sized-text;
+	}
+	$base-font-size		: 14px;
+	$base-line-height	: 18px;
+	
+	@include establish-baseline;
+	
+}

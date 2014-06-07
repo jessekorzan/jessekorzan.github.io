@@ -1,0 +1,47 @@
+.button {
+	background: $primary;
+	text-transform: uppercase;
+	font-weight: bold;
+	padding: $spacer/4;
+	color: $white;
+	@include border-radius(2px);
+}
+a.down {
+	border: 2px solid  rgba(shade($white, 15%), 0.84);
+	position: absolute;
+	left: calc(50% - 30px);
+	bottom: 15%;
+	width: $spacer;
+	height: $spacer;
+	
+	overflow: hidden;
+	@include transform(translate3d(0, 0, 0));
+	@include border-radius(100%);
+	@include opacity(0.5);
+	
+	
+	display: none;
+	
+	@include breakpoint($phablet) {
+		display: inline-block;
+	}
+	
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: $spacer - 4;
+		height: $spacer - 4;
+		text-align: center;
+		line-height: $spacer - 3;
+		content: "\f004";
+		font-family: "fontello";
+		font-size: 1.5em;
+		color: $white;
+	}
+	&:hover {
+		@include opacity(1);
+		border: 2px solid  rgba(shade($primary, 15%), 1);
+		@include transform(translate3d(0, 8%, 0));
+	}
+}

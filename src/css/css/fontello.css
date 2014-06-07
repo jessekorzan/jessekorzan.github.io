@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+ @font-face {
+  font-family: 'fontello';
+  src: url('../font/fontello.eot?19230263');
+  src: url('../font/fontello.eot?19230263#iefix') format('embedded-opentype'),
+       url('../font/fontello.woff?19230263') format('woff'),
+       url('../font/fontello.ttf?19230263') format('truetype'),
+       url('../font/fontello.svg?19230263#fontello') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'fontello';
+    src: url('../font/fontello.svg?19230263#fontello') format('svg');
+  }
+}
+*/
+ 
+ [class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+.icon-book-open:before { content: '📖'; } /* '\1f4d6' */
+.icon-cancel:before { content: '\2715'; } /* '✕' */
+.icon-pin:before { content: '📌'; } /* '\1f4cc' */
+.icon-sun-inv:before { content: '\2600'; } /* '☀' */
+.icon-cloud:before { content: '\2601'; } /* '☁' */
+.icon-home-1:before { content: '\e800'; } /* '' */
+.icon-article-alt:before { content: '\e735'; } /* '' */
+.icon-users:before { content: '\f064'; } /* '' */
+.icon-menu:before { content: '\f008'; } /* '' */
+.icon-th-list:before { content: '\f009'; } /* '' */
+.icon-ok-circled:before { content: '\f06d'; } /* '' */
+.icon-home:before { content: '\2302'; } /* '⌂' */
+.icon-chat:before { content: '\f03d'; } /* '' */
+.icon-bell:before { content: '\f03f'; } /* '' */
+.icon-camera:before { content: '📷'; } /* '\1f4f7' */
+.icon-down-open:before { content: '\f004'; } /* '' */
+.icon-left-open:before { content: '\f007'; } /* '' */
+.icon-right-open:before { content: '\f006'; } /* '' */
+.icon-twitter-circled:before { content: '\f057'; } /* '' */
+.icon-facebook-circled:before { content: '\f051'; } /* '' */
+.icon-linkedin-circled:before { content: '\f05b'; } /* '' */
+.icon-instagram-circled:before { content: '\f05e'; } /* '' */
+.icon-bicycle:before { content: '\e80a'; } /* '' */
+.icon-golf:before { content: '\e81c'; } /* '' */
+.icon-lodging:before { content: '\e824'; } /* '' */
+.icon-post:before { content: '\e82c'; } /* '' */
+.icon-school:before { content: '\e834'; } /* '' */
+.icon-tree-1:before { content: '\e83e'; } /* '' */
+.icon-calendar:before { content: '\f4c5'; } /* '' */

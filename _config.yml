@@ -1,4 +1,4 @@
 source: ./src
 destination: ./gathering_html
 prose:
-  rooturl: '/'
+  rooturl: './'

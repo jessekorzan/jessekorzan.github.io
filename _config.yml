@@ -1,4 +1,3 @@
-source:           ./src
 baseurl:          /
 prose:
   rooturl: './'

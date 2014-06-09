@@ -1,5 +1,4 @@
 source:           ./src
-destination:      ./_gh_pages
 baseurl:          /
 prose:
   rooturl: './'
